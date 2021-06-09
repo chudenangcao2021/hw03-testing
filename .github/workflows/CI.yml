@@ -27,4 +27,4 @@ jobs:
       env:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         SLACK_CHANNEL: 227-nvc
-        SLACK_FOOTER: CDNC 2021.
+        SLACK_FOOTER: chudenangcao 2021.
