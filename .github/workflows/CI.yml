@@ -6,8 +6,8 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-    runs-on: windows-latest
+  report:
+    runs-on: ubuntu-latest
     steps:
     - name: Katalon Report Uploader
       uses: katalon-studio/report-uploader@v0.0.8
@@ -16,6 +16,10 @@ jobs:
         PROJECT_ID: 166846
         TYPE: katalon
         REPORT_PATH: ReportFolder
+
+  build:
+    runs-on: windows-latest
+    steps:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Katalon Studio Github Action
