@@ -9,6 +9,13 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+    - name: Katalon Report Uploader
+      uses: katalon-studio/report-uploader@v0.0.8
+      env:
+        PASSWORD: 6f9f16d0-b184-4eac-b782-45028b842dc7
+        PROJECT_ID: 166846
+        TYPE: katalon
+        REPORT_PATH: ReportFolder
     - name: Checkout
       uses: actions/checkout@v2
     - name: Katalon Studio Github Action
