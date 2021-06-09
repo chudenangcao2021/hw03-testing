@@ -16,4 +16,5 @@ jobs:
       with:
           version: '7.5.5'
           projectPath: '${{ github.workspace }}'
-          args: '-noSplash -retry=0 -testSuitePath="Test Suites/Run All Test Case" -apiKey= ${{ secrets.API_KEY }} -browserType="Chrome" --config -webui.autoUpdateDrivers=true'
+#           args: '-noSplash -retry=0 -testSuitePath="Test Suites/Run All Test Case" -apiKey= ${{ secrets.API_KEY }} -browserType="Chrome" --config -webui.autoUpdateDrivers=true'
+          args: 'katalonc -noSplash -runMode=console -projectPath="${{ github.workspace }}" -retry=0 -testSuitePath="Test Suites/Run All Test Case" -executionProfile="default" -browserType="Chrome" --config -proxy.auth.option=NO_PROXY -proxy.system.option=NO_PROXY -proxy.system.applyToDesiredCapabilities=true'
