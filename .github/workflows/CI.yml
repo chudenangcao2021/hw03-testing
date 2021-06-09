@@ -17,3 +17,9 @@ jobs:
           version: '7.5.5'
           projectPath: '${{ github.workspace }}'
           args: '-noSplash -retry=0 -testSuitePath="Test Suites/Run All Test Case" -apiKey= ${{ secrets.API_KEY }} -browserType="Chrome" --config -webui.autoUpdateDrivers=true'
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_CHANNEL: 227-nvc
+        SLACK_FOOTER: CDNC 2021.
