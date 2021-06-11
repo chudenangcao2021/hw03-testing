@@ -16,7 +16,7 @@ jobs:
       with:
           version: '7.5.5'
           projectPath: '${{ github.workspace }}'
-          args: '-noSplash -retry=0 -testSuitePath="Test Suites/Run All Test Case" -testSuiteCollectionPath="Test Suites/Run All Test Cases Collection" -apiKey= ${{ secrets.API_KEY }} -browserType="Chrome" --config -webui.autoUpdateDrivers=true'
+          args: '-noSplash -retry=0 -testSuitePath="Test Suites/Run All Test Cases" -testSuiteCollectionPath="Test Suites/Run All Test Cases Collection" -apiKey= ${{ secrets.API_KEY }} -browserType="Chrome" --config -webui.autoUpdateDrivers=true'
   
   notification:
     runs-on: ubuntu-latest
